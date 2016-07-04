@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ADE-Se-2t6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S51-gY-BS4">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="MangaCell" id="Bgn-lq-PQb" customClass="MangaCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M8u-FS-zaA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="139"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="M8u-FS-zaA" secondAttribute="trailing" constant="-12" id="8fs-Mu-Ipu"/>
+                                            <constraint firstItem="M8u-FS-zaA" firstAttribute="top" secondItem="Bgn-lq-PQb" secondAttribute="topMargin" constant="-8" id="N9U-Br-N0k"/>
+                                            <constraint firstItem="M8u-FS-zaA" firstAttribute="leading" secondItem="Bgn-lq-PQb" secondAttribute="leadingMargin" constant="-8" id="WwI-pC-jUz"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="M8u-FS-zaA" secondAttribute="bottom" constant="-8" id="rM9-WW-fh6"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imgManga" destination="M8u-FS-zaA" id="Z9V-Gg-PKe"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MYD-9Q-Tts"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="u9L-M7-y0m"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ADE-Se-2t6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="2Ph-bc-yrA"/>
+                            <constraint firstItem="ADE-Se-2t6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="2bl-gf-YnV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ADE-Se-2t6" secondAttribute="bottom" id="F8d-cH-Pko"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ADE-Se-2t6" secondAttribute="trailing" constant="-20" id="HCb-zK-5LO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ADE-Se-2t6" secondAttribute="trailing" constant="-20" id="KIG-eq-jgY"/>
+                            <constraint firstItem="ADE-Se-2t6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="OYi-qT-zzD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2Ph-bc-yrA"/>
+                                <exclude reference="KIG-eq-jgY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mCollection" destination="ADE-Se-2t6" id="BJL-px-mwR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="357"/>
+        </scene>
+    </scenes>
+</document>
